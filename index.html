@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FixMacher – Dienstleistungen laut Anmeldung</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    .lang-content { display: none; }
+    .lang-de .de, .lang-en .en, .lang-ru .ru { display: block; }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 lang-de">
+  <header class="bg-white shadow-md p-4 text-center">
+    <h1 class="text-2xl font-bold">FixMacher</h1>
+    <div class="flex justify-center gap-2 mt-2">
+      <button onclick="switchLang('de')" class="px-2 py-1 bg-gray-200 rounded">🇩🇪 DE</button>
+      <button onclick="switchLang('en')" class="px-2 py-1 bg-gray-200 rounded">🇬🇧 EN</button>
+      <button onclick="switchLang('ru')" class="px-2 py-1 bg-gray-200 rounded">🇷🇺 RU</button>
+    </div>
+  </header>
+
+  <main class="p-6">
+    <section class="lang-content de">
+      <h2 class="text-xl font-semibold mb-4">Angemeldete Tätigkeiten</h2>
+      <ul class="space-y-2">
+        <li>🚚 Transport</li>
+        <li>🏠 Umzüge</li>
+        <li>🛠 Möbelmontage und Demontage</li>
+        <li>🏚 Haushaltsauflösung</li>
+        <li>🧹 Reinigung und Aufräumarbeiten</li>
+        <li>🗑 Entrümpelung</li>
+        <li>🌿 Gartenpflege</li>
+      </ul>
+    </section>
+
+    <section class="lang-content en">
+      <h2 class="text-xl font-semibold mb-4">Registered Services</h2>
+      <ul class="space-y-2">
+        <li>🚚 Transport</li>
+        <li>🏠 Moving services</li>
+        <li>🛠 Furniture assembly and disassembly</li>
+        <li>🏚 Household clearance</li>
+        <li>🧹 Cleaning and organizing work</li>
+        <li>🗑 Decluttering</li>
+        <li>🌿 Garden care</li>
+      </ul>
+    </section>
+
+    <section class="lang-content ru">
+      <h2 class="text-xl font-semibold mb-4">Зарегистрированные услуги</h2>
+      <ul class="space-y-2">
+        <li>🚚 Транспорт</li>
+        <li>🏠 Переезды</li>
+        <li>🛠 Сборка и разборка мебели</li>
+        <li>🏚 Ликвидация хозяйств</li>
+        <li>🧹 Уборка и наведение порядка</li>
+        <li>🗑 Расхламление</li>
+        <li>🌿 Уход за садом</li>
+      </ul>
+    </section>
+
+    <section class="p-6 bg-white">
+      <h2 class="text-xl font-semibold mb-4">Fotoplatzhalter / Photo Placeholders / Фото-заглушки</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="bg-gray-200 h-40 flex items-center justify-center rounded shadow">Transport</div>
+        <div class="bg-gray-200 h-40 flex items-center justify-center rounded shadow">Umzüge</div>
+        <div class="bg-gray-200 h-40 flex items-center justify-center rounded shadow">Montage</div>
+        <div class="bg-gray-200 h-40 flex items-center justify-center rounded shadow">Haushalt</div>
+        <div class="bg-gray-200 h-40 flex items-center justify-center rounded shadow">Reinigung</div>
+        <div class="bg-gray-200 h-40 flex items-center justify-center rounded shadow">Entrümpelung</div>
+        <div class="bg-gray-200 h-40 flex items-center justify-center rounded shadow">Gartenpflege</div>
+      </div>
+    </section>
+
+    <section class="p-6 bg-gray-50 mt-6 rounded shadow">
+      <h2 class="text-xl font-semibold mb-4">Kontakt / Contact / Связь</h2>
+      <form class="space-y-4 max-w-xl mx-auto">
+        <input type="text" placeholder="Ihr Name / Your Name / Ваше имя" class="w-full p-2 border rounded" required>
+        <input type="email" placeholder="Ihre E-Mail / Your Email / Ваша почта" class="w-full p-2 border rounded" required>
+        <textarea placeholder="Ihre Nachricht / Your Message / Ваше сообщение" class="w-full p-2 border rounded h-32" required></textarea>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Senden / Send / Отправить</button>
+      </form>
+    </section>
+
+    <div class="fixed bottom-4 right-4">
+      <a href="https://wa.me/491631163360" target="_blank"
+         class="bg-green-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+        <span>📱 WhatsApp</span>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    function switchLang(lang) {
+      document.body.className = 'bg-gray-100 text-gray-800 lang-' + lang;
+    }
+  </script>
+</body>
+</html>
