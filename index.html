@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FixMacher – Dienstleistungen laut Anmeldung</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    .lang-content { display: none; }
+    .lang-de .de, .lang-en .en, .lang-ru .ru { display: block; }
+    .category-tile {
+      position: relative;
+      overflow: hidden;
+    }
+    .category-tile img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    .category-name {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      font-weight: bold;
+      padding: 0.5rem;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-white shadow-md p-4 text-center">
+    <h1 class="text-2xl font-bold">FixMacher</h1>
+    <div class="flex justify-center gap-2 mt-2">
+      <button onclick="switchLang('de')" class="px-2 py-1 bg-gray-200 rounded">🇩🇪 DE</button>
+      <button onclick="switchLang('en')" class="px-2 py-1 bg-gray-200 rounded">🇬🇧 EN</button>
+      <button onclick="switchLang('ru')" class="px-2 py-1 bg-gray-200 rounded">🇷🇺 RU</button>
+    </div>
+  </header>
+
+  <main class="p-6">
+    <!-- Language Specific Descriptions -->
+    <section class="lang-content de">
+      <h2 class="text-xl font-semibold mb-4">Angemeldete Tätigkeiten</h2>
+      <ul class="space-y-2">
+        <li>🚚 Transport</li>
+        <li>🏠 Umzüge</li>
+        <li>🛠 Möbelmontage und Demontage</li>
+        <li>🏚 Haushaltsauflösung</li>
+        <li>🧹 Reinigung und Aufräumarbeiten</li>
+        <li>🗑 Entrümpelung</li>
+        <li>🌿 Gartenpflege</li>
+      </ul>
+    </section>
+
+    <section class="lang-content en">
+      <h2 class="text-xl font-semibold mb-4">Registered Services</h2>
+      <ul class="space-y-2">
+        <li>🚚 Transport</li>
+        <li>🏠 Moving services</li>
+        <li>🛠 Furniture assembly and disassembly</li>
+        <li>🏚 Household clearance</li>
+        <li>🧹 Cleaning and organizing work</li>
+        <li>🗑 Decluttering</li>
+        <li>🌿 Garden care</li>
+      </ul>
+    </section>
+
+    <section class="lang-content ru">
+      <h2 class="text-xl font-semibold mb-4">Зарегистрированные услуги</h2>
+      <ul class="space-y-2">
+        <li>🚚 Транспорт</li>
+        <li>🏠 Переезды</li>
+        <li>🛠 Сборка и разборка мебели</li>
+        <li>🏚 Ликвидация хозяйств</li>
+        <li>🧹 Уборка и наведение порядка</li>
+        <li>🗑 Расхламление</li>
+        <li>🌿 Уход за садом</li>
+      </ul>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="p-6 bg-white">
+      <h2 class="text-xl font-semibold mb-4">
+        <span class="de">Fotoplatzhalter</span>
+        <span class="en hidden">Photo Placeholders</span>
+        <span class="ru hidden">Фото-заглушки</span>
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="category-tile h-40 rounded shadow">
+          <img src="photos/transport.jpg" alt="Transport">
+          <div class="category-name">
+            <span class="de">Transport</span>
+            <span class="en hidden">Transport</span>
+            <span class="ru hidden">Транспорт</span>
+          </div>
+        </div>
+        <div class="category-tile h-40 rounded shadow">
+          <img src="photos/moving.jpg" alt="Umzüge">
+          <div class="category-name">
+            <span class="de">Umzüge</span>
+            <span class="en hidden">Moving</span>
+            <span class="ru hidden">Переезды</span>
+          </div>
+        </div>
+        <div class="category-tile h-40 rounded shadow">
+          <img src="photos/assembly.jpg" alt="Montage">
+          <div class="category-name">
+            <span class="de">Montage</span>
+            <span class="en hidden">Assembly</span>
+            <span class="ru hidden">Сборка</span>
+          </div>
+        </div>
+        <div class="category-tile h-40 rounded shadow">
+          <img src="photos/household.jpg" alt="Haushalt">
+          <div class="category-name">
+            <span class="de">Haushalt</span>
+            <span class="en hidden">Household</span>
+            <span class="ru hidden">Хозяйство</span>
+          </div>
+        </div>
+        <div class="category-tile h-40 rounded shadow">
+          <img src="photos/cleaning.jpg" alt="Reinigung">
+          <div class="category-name">
+            <span class="de">Reinigung</span>
+            <span class="en hidden">Cleaning</span>
+            <span class="ru hidden">Уборка</span>
+          </div>
+        </div>
+        <div class="category-tile h-40 rounded shadow">
+          <img src="photos/decluttering.jpg" alt="Entrümpelung">
+          <div class="category-name">
+            <span class="de">Entrümpelung</span>
+            <span class="en hidden">Decluttering</span>
+            <span class="ru hidden">Расхламление</span>
+          </div>
+        </div>
+        <div class="category-tile h-40 rounded shadow">
+          <img src="photos/garden.jpg" alt="Gartenpflege">
+          <div class="category-name">
+            <span class="de">Gartenpflege</span>
+            <span class="en hidden">Garden Care</span>
+            <span class="ru hidden">Уход за садом</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <div class="fixed bottom-4 right-4">
+      <a href="https://wa.me/491631163360" target="_blank"
+         class="bg-green-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+        <span>📱 WhatsApp</span>
+      </a>
+    </div>
+  </main>
+
+  <script>
+    function switchLang(lang) {
+      localStorage.setItem("lang", lang);
+      document.body.className = 'bg-gray-100 text-gray-800 lang-' + lang;
+
+      document.querySelectorAll('.de, .en, .ru').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('.' + lang).forEach(el => el.classList.remove('hidden'));
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem("lang") || "de";
+      switchLang(lang);
+    });
+  </script>
+</body>
+</html>
+
