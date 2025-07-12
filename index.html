@@ -137,17 +137,28 @@
     </section>
 
     <!-- WhatsApp Button -->
-    <div class="fixed bottom-4 right-4">
-      <a href="https://wa.me/491631163360" target="_blank"
-         class="bg-green-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
-        <span>📱 WhatsApp</span>
-      </a>
-    </div>
-  </main>
+<div class="fixed bottom-4 right-4">
+	<a href="https://wa.me/4917647571404" target="_blank"
+		class="bg-green-500 text-white px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+		<span>📱 WhatsApp</span>
+	</a>
+	<div class="fixed bottom-20 right-4 z-50">
+		<a
+			href="mailto:fixmacher.service@gmail.com"
+			class="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-semibold rounded-full shadow-lg hover:bg-blue-700 transition duration-200"
+		>
+			<svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+			</svg>
+			Email Us
+		</a>
+	</div>
+</div>
+</main>
 
-  <script>
-    function switchLang(lang) {
-      localStorage.setItem("lang", lang);
+<script>
+function switchLang(lang) {
+localStorage.setItem("lang", lang);
       document.body.className = 'bg-gray-100 text-gray-800 lang-' + lang;
 
       document.querySelectorAll('.de, .en, .ru').forEach(el => el.classList.add('hidden'));
